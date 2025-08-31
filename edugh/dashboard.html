@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EduGuru</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduGuru</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#courses" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="user-menu">
+                <div class="user-menu-toggle">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-email">john@example.com</span>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-menu">
+                    <a href="#"><i class="fas fa-user"></i> Profile</a>
+                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                    <button class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Learning Dashboard</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#overview" class="sidebar-item active" data-section="overview">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#notes" class="sidebar-item" data-section="notes">
+                    <i class="fas fa-sticky-note"></i>
+                    <span>My Notes</span>
+                </a>
+                <a href="#todos" class="sidebar-item" data-section="todos">
+                    <i class="fas fa-tasks"></i>
+                    <span>To-Do List</span>
+                </a>
+                <a href="#courses" class="sidebar-item" data-section="courses">
+                    <i class="fas fa-book"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="#progress" class="sidebar-item" data-section="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="#calendar" class="sidebar-item" data-section="calendar">
+                    <i class="fas fa-calendar"></i>
+                    <span>Calendar</span>
+                </a>
+                <a href="#users" class="sidebar-item" data-section="users">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Welcome back, John!</h1>
+                    <p>Here's your learning progress today</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>5</h3>
+                            <p>Active Courses</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>12h</h3>
+                            <p>Study Time</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>85%</h3>
+                            <p>Completion Rate</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>8</h3>
+                            <p>Tasks Due</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="actions-grid">
+                        <button class="action-btn" onclick="showSection('notes')">
+                            <i class="fas fa-plus"></i>
+                            <span>Add Note</span>
+                        </button>
+                        <button class="action-btn" onclick="showSection('todo')">
+                            <i class="fas fa-plus"></i>
+                            <span>Add Task</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-play"></i>
+                            <span>Continue Learning</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-calendar-plus"></i>
+                            <span>Schedule Study</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notes Section -->
+            <section id="notes" class="dashboard-section">
+                <div class="section-header">
+                    <h1>My Notes</h1>
+                    <button class="btn btn-primary" onclick="dashboard.openNoteModal()">
+                        <i class="fas fa-plus"></i> Add Note
+                    </button>
+                </div>
+                
+                <div class="notes-container">
+                    <div class="notes-filters">
+                        <input type="text" placeholder="Search notes..." class="search-input">
+                        <select class="filter-select">
+                            <option value="all">All Subjects</option>
+                            <option value="math">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="history">History</option>
+                            <option value="literature">Literature</option>
+                        </select>
+                    </div>
+                    
+                    <div class="notes-grid" id="notesGrid">
+                        <!-- Notes will be dynamically added here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- To-Do Section -->
+            <section id="todo" class="dashboard-section">
+                <div class="section-header">
+                    <h1>To-Do List</h1>
+                    <button class="btn btn-primary" onclick="dashboard.openTodoModal()">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </div>
+                
+                <div class="todo-container">
+                    <div class="todo-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="pending">Pending</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                        <button class="filter-btn" data-filter="overdue">Overdue</button>
+                    </div>
+                    
+                    <div class="todo-list" id="todoList">
+                        <!-- Todo items will be dynamically added here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Section -->
+            <section id="courses" class="dashboard-section">
+                <div class="section-header">
+                    <h1>My Courses</h1>
+                </div>
+                
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-progress">
+                            <div class="progress-circle">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="75, 100"/>
+                                </svg>
+                                <span class="progress-text">75%</span>
+                            </div>
+                        </div>
+                        <div class="course-info">
+                            <h3>Web Development</h3>
+                            <p>Master HTML, CSS, and JavaScript</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 8 weeks left</span>
+                                <span><i class="fas fa-play"></i> Continue</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-progress">
+                            <div class="progress-circle">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="45, 100"/>
+                                </svg>
+                                <span class="progress-text">45%</span>
+                            </div>
+                        </div>
+                        <div class="course-info">
+                            <h3>Data Science</h3>
+                            <p>Learn Python and Machine Learning</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 12 weeks left</span>
+                                <span><i class="fas fa-play"></i> Continue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progress" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Learning Progress</h1>
+                </div>
+                
+                <div class="progress-charts">
+                    <div class="chart-container">
+                        <h3>Weekly Study Hours</h3>
+                        <div class="chart" id="weeklyChart">
+                            <!-- Chart will be rendered here -->
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h3>Subject Performance</h3>
+                        <div class="chart" id="subjectChart">
+                            <!-- Chart will be rendered here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calendar Section -->
+            <section id="calendar" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Study Calendar</h1>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Event
+                    </button>
+                </div>
+                
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="calendar-nav" onclick="previousMonth()">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h2 id="currentMonth">December 2024</h2>
+                        <button class="calendar-nav" onclick="nextMonth()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Calendar will be dynamically generated -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Note Modal -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Note</h2>
+                <button class="close-btn" onclick="dashboard.closeNoteModal()">&times;</button>
+            </div>
+            <form id="noteForm">
+                <div class="form-group">
+                    <label for="noteTitle">Title</label>
+                    <input type="text" id="noteTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="noteSubject">Subject</label>
+                    <select id="noteSubject" required>
+                        <option value="">Select Subject</option>
+                        <option value="math">Mathematics</option>
+                        <option value="science">Science</option>
+                        <option value="history">History</option>
+                        <option value="literature">Literature</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="noteContent">Content</label>
+                    <textarea id="noteContent" rows="6" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="dashboard.closeNoteModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Note</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Todo Modal -->
+    <div id="todoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Task</h2>
+                <button class="close-btn" onclick="dashboard.closeTodoModal()">&times;</button>
+            </div>
+            <form id="todoForm">
+                <div class="form-group">
+                    <label for="todoTitle">Task Title</label>
+                    <input type="text" id="todoTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="todoDescription">Description</label>
+                    <textarea id="todoDescription" rows="3"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="todoDueDate">Due Date</label>
+                        <input type="date" id="todoDueDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="todoPriority">Priority</label>
+                        <select id="todoPriority" required>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="dashboard.closeTodoModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    
+    <!-- Firebase Configuration -->
+    <script src="firebase-config.js"></script>
+    
+    <script src="dashboard.js"></script>
+</body>
+</html>

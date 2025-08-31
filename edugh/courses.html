@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - EduGuru</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="courses.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EduGuru</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link active">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="signup.html" class="nav-link signup-btn">Sign Up</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Explore Our Courses</h1>
+            <p>Discover hundreds of courses designed to help you master new skills and advance your career</p>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Courses</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Instructors</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="course-categories">
+        <div class="container">
+            <div class="categories-grid">
+                <div class="category-card" data-category="technology">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <p>Programming, Web Development, AI/ML</p>
+                    <span class="course-count">150+ Courses</span>
+                </div>
+                <div class="category-card" data-category="business">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business</h3>
+                    <p>Marketing, Finance, Management</p>
+                    <span class="course-count">120+ Courses</span>
+                </div>
+                <div class="category-card" data-category="design">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design</h3>
+                    <p>UI/UX, Graphic Design, Animation</p>
+                    <span class="course-count">80+ Courses</span>
+                </div>
+                <div class="category-card" data-category="languages">
+                    <div class="category-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Languages</h3>
+                    <p>English, Spanish, French, German</p>
+                    <span class="course-count">60+ Courses</span>
+                </div>
+                <div class="category-card" data-category="health">
+                    <div class="category-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health & Fitness</h3>
+                    <p>Nutrition, Exercise, Wellness</p>
+                    <span class="course-count">70+ Courses</span>
+                </div>
+                <div class="category-card" data-category="music">
+                    <div class="category-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Music & Arts</h3>
+                    <p>Instruments, Painting, Photography</p>
+                    <span class="course-count">50+ Courses</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Filters -->
+    <section class="course-filters">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-box">
+                    <input type="text" id="courseSearch" placeholder="Search courses...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-options">
+                    <select id="levelFilter">
+                        <option value="">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                    <select id="durationFilter">
+                        <option value="">All Durations</option>
+                        <option value="0-5">0-5 hours</option>
+                        <option value="5-10">5-10 hours</option>
+                        <option value="10-20">10-20 hours</option>
+                        <option value="20+">20+ hours</option>
+                    </select>
+                    <select id="priceFilter">
+                        <option value="">All Prices</option>
+                        <option value="free">Free</option>
+                        <option value="paid">Paid</option>
+                    </select>
+                    <button class="btn btn-outline" id="clearFilters">Clear Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Listings -->
+    <section class="course-listings">
+        <div class="container">
+            <div class="listings-header">
+                <h2>Featured Courses</h2>
+                <div class="sort-options">
+                    <span>Sort by:</span>
+                    <select id="sortCourses">
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Course cards will be dynamically generated -->
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-primary btn-large" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    Load More Courses
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Preview Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalCourseTitle">Course Title</h2>
+                <button class="close-btn" onclick="closeCourseModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="course-preview-content">
+                    <div class="course-video">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play"></i>
+                            <span>Course Preview</span>
+                        </div>
+                    </div>
+                    <div class="course-details">
+                        <div class="course-meta">
+                            <span class="course-level">Beginner</span>
+                            <span class="course-duration"><i class="fas fa-clock"></i> 12 hours</span>
+                            <span class="course-students"><i class="fas fa-users"></i> 2.5K students</span>
+                        </div>
+                        <div class="course-description">
+                            <p id="modalCourseDescription">Course description will appear here...</p>
+                        </div>
+                        <div class="course-curriculum">
+                            <h4>What you'll learn:</h4>
+                            <ul id="modalCourseCurriculum">
+                                <li>Skill 1</li>
+                                <li>Skill 2</li>
+                                <li>Skill 3</li>
+                            </ul>
+                        </div>
+                        <div class="course-instructor">
+                            <h4>Instructor</h4>
+                            <div class="instructor-info">
+                                <div class="instructor-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="instructor-details">
+                                    <h5 id="modalInstructorName">Instructor Name</h5>
+                                    <span id="modalInstructorTitle">Instructor Title</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="course-pricing">
+                    <span class="course-price" id="modalCoursePrice">$99</span>
+                    <span class="original-price" id="modalOriginalPrice">$199</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" onclick="closeCourseModal()">Close</button>
+                    <button class="btn btn-primary" onclick="enrollCourse()">
+                        <i class="fas fa-graduation-cap"></i>
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EduGuru</span>
+                    </div>
+                    <p>Transform your future with world-class education. Join millions of learners worldwide and unlock your potential.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Student Community</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduGuru. All rights reserved. | Empowering learners worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="courses.js"></script>
+</body>
+</html>
+
